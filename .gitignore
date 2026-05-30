@@ -1,0 +1,7 @@
+# セキュリティ：ローカル設定ファイル（APIキーを含む）をGit管理から除外
+config.js
+
+# OS一時ファイル
+Thumbs.db
+.DS_Store
+

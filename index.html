@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Garden Party | 忙しい日常を忘れ、きらびやかな太陽の下で心躍るご褒美のひと時を。CHISAKOがお届けする特別なティーペアリングとロースイーツのガーデンパーティー。">
+    <title>The Garden Party | An Elegant Afternoon of Tea & Raw Sweets</title>
+
+    <!-- Google Fonts インポート (エレガントな Cormorant Garamond と日本語セリフ Noto Serif JP、読みやすい Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+
+    <!-- スタイルシートのリンク -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 【セキュリティ対応】
+         config.js は .gitignore に登録されており、ローカル環境でのみ読み込まれます。
+         存在しない場合でもエラーでサイト全体がクラッシュしないよう、JavaScript側で安全にハンドリングします。 -->
+    <script src="config.js" defer onerror="console.warn('config.js が見つかりません。config.example.js から作成してください。')"></script>
+    <!-- メインロジック -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ① オープニング演出用の封筒 (JavaScriptで開閉制御) -->
+    <div id="envelope-overlay" class="envelope-overlay">
+        <div class="envelope">
+            <p class="envelope-text-small">For You</p>
+            <h1 class="envelope-title">Special Invitation</h1>
+            <p class="envelope-text">そっとタップして、招待状を開く</p>
+        </div>
+    </div>
+
+    <!-- メインコンテンツ (封筒が開いた後に表示される) -->
+    <div id="main-content" class="main-content hidden">
+
+        <!-- ② ナビゲーションバー -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">Teanoir</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#details">Details</a></li>
+                    <li><a href="#contact" class="nav-contact-btn">Reserve</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- ③ ヒーローセクション (ファーストビュー) -->
+        <header class="hero">
+            <div class="hero-bg-overlay"></div>
+            <div class="sunlight-glow"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle">Presented by CHISAKO</p>
+                <h2 class="hero-title">The Garden Party</h2>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">An Elegant Afternoon of Tea & Raw Sweets</p>
+                <p class="hero-subtext">日常の忙しさを少しだけ脇に置いて、贅沢で愛らしいひと時を。</p>
+                <div class="hero-badge">
+                    <span>DRESS CODE: <strong>WHITE</strong></span>
+                </div>
+            </div>
+            <div class="scroll-btn" id="scroll-to-about">
+                <span>Explore</span>
+                <div class="arrow-down"></div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ④ コンセプト・ストーリーセクション -->
+            <section id="about" class="section about-section">
+                <div class="container">
+                    <span class="section-label">Concept</span>
+                    <h3 class="section-title">日常から、オアシスへ。</h3>
+                    <div class="about-grid">
+                        <div class="about-text-area">
+                            <p class="about-lead">
+                                いつもがんばっているあなたへ。<br>
+                                日常のノイズをリセットし、まぶしい太陽の下で心躍るご褒美時間を。
+                            </p>
+                            <p class="about-paragraph">
+                                普段、仕事で忙しく働いているあなた。あるいは、育児や家事に追われ、自分のことをつい後回しにしがちなママさん。そんな方々が、ひとときだけでも忙しい「役割」から離れ、「わたし自身」に戻るための特別な場所をご用意しました。
+                            </p>
+                            <p class="about-paragraph">
+                                陽だまりの美しいプライベートガーデンで、きらびやかな太陽の光を浴びながら、胸が高鳴るような贅沢で愛らしいひと時を過ごしませんか？5名様限定の少人数サロンだからこそ叶う、お一人お一人と丁寧に向き合う贅沢なティーペアリング体験をお届けします。
+                            </p>
+                            <div class="highlight-box">
+                                <strong>日常を忘れ、自分に帰る場所</strong>
+                                ドレスコードの「ホワイト」を身にまとい、陽だまりの美しい庭園で、そっと自分へご褒美を贈る特別な午後をお届けします。
+                            </div>
+                        </div>
+                        <div class="about-visual">
+                            <div class="art-frame">
+                                <div class="art-inner">
+                                    <span class="art-word">Welcome</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ⑤ プロフィールセクション (主催者紹介) -->
+            <section id="profile" class="section profile-section">
+                <div class="container">
+                    <span class="section-label">Host Profile</span>
+                    <h3 class="section-title">CHISAKO</h3>
+                    <div class="profile-grid">
+                        <div class="profile-image-area">
+                            <div class="profile-card-decor">
+                                <div class="profile-avatar-placeholder">
+                                    <span>Chisako</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-text-area">
+                            <p class="profile-subtitle">看護師 / ティーペアリングスペシャリスト / ロースイーツ講師</p>
+                            <p class="profile-paragraph">
+                                現役看護師としての知見を活かし、心と身体の健康に深く寄り添う「優しさ」と、卵・乳製品・小麦・白砂糖不使用で宝石のような美しさを両立させた「ロースイーツ」を提供。
+                            </p>
+                            <p class="profile-paragraph">
+                                植物の力強い生命力を宿したハーブとロースイーツが極上に調和する「専門性の高いティーペアリング」を追求し、「日常の中で、自分を思い切り甘やかす極上のときめき時間」として、五感すべてが満たされる体験を丁寧に提供しています。
+                            </p>
+                            <p class="highlight-text">
+                                "陽だまりの中で、心ときめく特別なひと時をご一緒しましょう。"
+                            </p>
+                            <div class="story-link-area">
+                                <p class="story-link-desc">日々の活動やときめきの日常はInstagramで発信しています。</p>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-story-btn">View Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ⑥ ときめきのガラスケースセクション (メインの体験ギミック) -->
+            <section id="experience" class="section experience-section">
+                <div class="container">
+                    <span class="section-label">Experience</span>
+                    <h3 class="section-title">ときめきのガラスドーム</h3>
+                    <p class="section-description">
+                        すりガラスのドームの中には、特別なティーペアリングとスイーツが眠っています。<br>
+                        そっとタップしてドームを開け、心躍る瞬間をお楽しみください。
+                    </p>
+
+                    <!-- ガラスケースのグリッド配置 -->
+                    <div class="glass-grid">
+
+                        <!-- ケース 1 (ブルー) -->
+                        <div class="glass-card" id="case-blue">
+                            <div class="glass-dome-wrapper">
+                                <div class="glass-dome-cover">
+                                    <div class="glass-reflection"></div>
+                                    <div class="glass-knob"></div>
+                                </div>
+                                <div class="sweets-content sweets-blue"></div>
+                            </div>
+                            <div class="glass-stand"></div>
+                            <div class="case-info">
+                                <span class="pairing-badge badge-blue">Blue Pairing</span>
+                                <h4 class="case-item-title">青のしずく × 爽やか柑橘タルト</h4>
+                                <p class="case-item-desc">
+                                    美しいバタフライピーとレモンマートルをブレンドした、青から紫へ色が変わる爽快なハーブティー。爽やかな柑橘のロータルトが、お口の中で爽やかに調和します。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ケース 2 (レッド) -->
+                        <div class="glass-card" id="case-red">
+                            <div class="glass-dome-wrapper">
+                                <div class="glass-dome-cover">
+                                    <div class="glass-reflection"></div>
+                                    <div class="glass-knob"></div>
+                                </div>
+                                <div class="sweets-content sweets-red"></div>
+                            </div>
+                            <div class="glass-stand"></div>
+                            <div class="case-info">
+                                <span class="pairing-badge badge-red">Red Pairing</span>
+                                <h4 class="case-item-title">ローズ・ロイヤル × ベリーショコラ</h4>
+                                <p class="case-item-desc">
+                                    ハイビスカスとローズヒップをブレンドした華やかで酸味のある紅茶。濃厚でなめらかな生チョコ風ロースイーツに、甘酸っぱいベリーの赤が「キュン」と弾けます。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- ケース 3 (ゴールド) -->
+                        <div class="glass-card" id="case-gold">
+                            <div class="glass-dome-wrapper">
+                                <div class="glass-dome-cover">
+                                    <div class="glass-reflection"></div>
+                                    <div class="glass-knob"></div>
+                                </div>
+                                <div class="sweets-content sweets-sage"></div>
+                            </div>
+                            <div class="glass-stand"></div>
+                            <div class="case-info">
+                                <span class="pairing-badge badge-sage">Gold Pairing</span>
+                                <h4 class="case-item-title">太陽の果実 × ご褒美セイボリー</h4>
+                                <p class="case-item-desc">
+                                    きらびやかな太陽の光を浴びた無農薬ハーブと、スパイスを効かせたアレンジ紅茶。太陽の下でつまむのにぴったりな、ナッツと有機野菜のヘルシーな一口軽食。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ⑦ ビジュアルギャラリーセクション -->
+            <section id="gallery" class="section gallery-section">
+                <div class="container">
+                    <span class="section-label">Visual Gallery</span>
+                    <h3 class="section-title">陽だまりの情景</h3>
+                    <p class="section-description">
+                        心地よい光、豊かな緑、そして心躍るスイーツたち。パーティーを彩る美しい世界観。
+                    </p>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item item-large">
+                            <div class="gallery-img-placeholder g-bg-1"></div>
+                            <div class="gallery-caption">
+                                <span>Sweets</span>
+                                <h4>宝石のようなロースイーツ</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img-placeholder g-bg-2"></div>
+                            <div class="gallery-caption">
+                                <span>Tea</span>
+                                <h4>透き通るハーブティー</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-img-placeholder g-bg-3"></div>
+                            <div class="gallery-caption">
+                                <span>Garden</span>
+                                <h4>木漏れ日のテラス</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item item-wide">
+                            <div class="gallery-img-placeholder g-bg-4"></div>
+                            <div class="gallery-caption">
+                                <span>Party</span>
+                                <h4>白が映える美しい空間</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ⑧ イベント詳細セクション -->
+            <section id="details" class="section details-section">
+                <div class="container">
+                    <span class="section-label">Details</span>
+                    <h3 class="section-title">パーティーのご案内</h3>
+
+                    <div class="details-grid">
+                        <div class="details-card">
+                            <div class="details-icon">📅</div>
+                            <h3>Date & Time</h3>
+                            <p class="details-val">6月22日 (Mon)</p>
+                            <p class="details-sub">13:30 - 16:00 (受付 13:15〜)</p>
+                        </div>
+
+                        <div class="details-card">
+                            <div class="details-icon">👗</div>
+                            <h3>Dress Code</h3>
+                            <p class="details-val highlight-text">WHITE</p>
+                            <p class="details-sub">ぜひ、あなたを輝かせる「白いお洋服」でお越しください。</p>
+                        </div>
+
+                        <div class="details-card">
+                            <div class="details-icon">👥</div>
+                            <h3>Capacity</h3>
+                            <p class="details-val">5名様限定</p>
+                            <p class="details-sub">完全予約制。少人数ならではの贅沢で親密なご褒美時間をお届けします。</p>
+                        </div>
+
+                        <div class="details-card">
+                            <div class="details-icon">📍</div>
+                            <h3>Location</h3>
+                            <p class="details-val">陽だまりのガーデンサロン</p>
+                            <p class="details-sub">木漏れ日とハーブの香りに包まれた美しい特別邸宅テラス（詳細はご予約確定後にお伝えします）</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ⑨ RSVP (出席確認・自分へのご褒美予約) セクション -->
+            <section id="contact" class="section contact-section">
+                <div class="container">
+                    <span class="section-label">Reservation</span>
+                    <h3 class="section-title">ご褒美の時間を予約する</h3>
+                    <p class="section-description">
+                        日常の忙しさを少しだけ脇に置いて、<br>
+                        きらびやかな太陽の下で一緒に素敵な時間を過ごしましょう。
+                    </p>
+
+                    <div class="contact-card" style="text-align: left; max-width: 650px;">
+                        <!-- フォーム本体 (送信時の安全性を考慮した設計) -->
+                        <form id="rsvp-form" class="rsvp-form">
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label for="guest-name" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">お名前</label>
+                                <input type="text" id="guest-name" name="name" required placeholder="例：chisako"
+                                    class="form-input">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 24px;">
+                                <label for="guest-email" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">メールアドレス</label>
+                                <input type="email" id="guest-email" name="email" required placeholder="example@email.com"
+                                    class="form-input">
+                            </div>
+
+                            <div class="form-group" style="margin-bottom: 30px;">
+                                <label for="guest-message" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">CHISAKOへのメッセージ / アレルギーなど</label>
+                                <textarea id="guest-message" name="message" rows="4"
+                                    placeholder="楽しみにしていることや、アレルギー・特別なご要望があればご記入ください..." class="form-input" style="resize: vertical; min-height: 120px;"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" style="width: 100%;">
+                                <span>ご褒美の時間を確定する</span>
+                            </button>
+                        </form>
+
+                        <!-- 送信完了画面 (初期状態は非表示、JSで制御、セキュリティXSS対策済み) -->
+                        <div id="rsvp-success" class="rsvp-success hidden" style="text-align: center;">
+                            <div class="success-icon" style="font-size: 3rem; margin-bottom: 20px; animation: float 3s infinite ease-in-out;">✨</div>
+                            <h4 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-text); margin-bottom: 16px;">ご予約ありがとうございます！</h4>
+                            <p class="success-message" style="font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 24px; line-height: 1.8;">
+                                <strong id="display-name" style="color: var(--color-primary-dark); font-size: 1.2rem; font-weight: 600;"></strong> 様のご褒美の時間が確定しました。<br>
+                                6月22日、白いお召し物でお会いできるのを心より楽しみにしております。
+                            </p>
+                            <p class="success-sub" style="font-size: 0.8rem; color: var(--color-text-light); opacity: 0.8; margin-bottom: 30px;">
+                                ※入力いただいた情報は、ブラウザに安全に保存されました。（LocalStorage）
+                            </p>
+                            <button id="reset-form-btn" class="reset-btn">戻る</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- ⑩ フッター -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-brand">The Garden Party</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <span class="footer-divider">|</span>
+                    <a href="#experience">Experience</a>
+                    <span class="footer-divider">|</span>
+                    <a href="#details">Details</a>
+                    <span class="footer-divider">|</span>
+                    <a href="#contact">Reserve</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Presented by CHISAKO. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
