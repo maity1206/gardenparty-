@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 
 <head>
@@ -43,7 +43,10 @@
         <!-- ② ナビゲーションバー -->
         <nav class="navbar">
             <div class="nav-container">
-                <a href="#" class="nav-logo">Teanoir</a>
+                <a href="#" class="nav-logo-wrapper">
+                    <span class="nav-logo-main">Teanoir</span>
+                    <span class="nav-logo-sub">陽だまりのハーブ＆ロースイーツサロン</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#profile">Profile</a></li>
@@ -98,6 +101,12 @@
                             <p class="about-paragraph">
                                 陽だまりの美しいプライベートガーデンで、きらびやかな太陽の光を浴びながら、胸が高鳴るような贅沢で愛らしいひと時を過ごしませんか？5名様限定の少人数サロンだからこそ叶う、お一人お一人と丁寧に向き合う贅沢なティーペアリング体験をお届けします。
                             </p>
+                            <p class="about-paragraph"
+                                style="margin-top: 15px; border-top: 1px dashed rgba(143, 168, 155, 0.2); padding-top: 15px;">
+                                <strong>ブランド名「Teanoir（ティーノワール）」の由来</strong><br>
+                                香り豊かな「Tea（ハーブティー）」に、極上ワインの代名詞ピノ・ノワールを想わせるエレガントな「Noir（黒/深み）」を掛け合わせました。
+                                お酒が飲めない時や、特別な時間をノンアルコールで過ごしたい時。「甘いジンジャーエールしか選べない世界」を変え、高級ワインのように五感で愉しむ、どこまでも優雅で心躍るノンアルコールティー体験をお届けしたいという強い想いが込められています。
+                            </p>
                             <div class="highlight-box">
                                 <strong>日常を忘れ、自分に帰る場所</strong>
                                 ドレスコードの「ホワイト」を身にまとい、陽だまりの美しい庭園で、そっと自分へご褒美を贈る特別な午後をお届けします。
@@ -110,6 +119,370 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- ⑤ 人生ストーリー漫画シアターセクション -->
+            <section id="manga-story" class="section manga-theater-section">
+                <div class="container">
+                    <span class="section-label">Our Story</span>
+                    <h3 class="section-title">CHISAKOの人生物語</h3>
+                    <p class="section-description"
+                        style="text-align: center; margin-bottom: 30px; line-height: 1.8; color: var(--color-text-light);">
+                        「忙しい日々に寄り添う、唯一無二の癒やしを届けたい」<br>
+                        看護師から起業家へ、30年の歩みとロースイーツ・ハーブとの出会いを描いたシアター動画です。
+                    </p>
+
+                    <!-- シアタープレイヤー本体 -->
+                    <div class="manga-player-card">
+                        <!-- プレイヤーヘッダーとモード切り替え -->
+                        <div class="manga-player-header">
+                            <span class="manga-player-title">✨ Story Theater</span>
+                        </div>
+
+                        <!-- 映像スクリーンエリア -->
+                        <div class="manga-screen">
+                            <div class="manga-frame-overlay"></div>
+
+                            <!-- ====================
+                                 MODE A: ストーリー版 (19 Slides)
+                                 ==================== -->
+                            <!-- シーン 1 -->
+                            <div class="manga-slide slide-story active" data-scene="1">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_birth.png" alt="姫路のゆかたまつりに生まれて" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 1: 姫路のゆかたまつりに生まれて (0歳)</span>
+                                    <p class="manga-text"
+                                        data-text="1975年6月22日。姫路のゆかたまつりがある日、私は長女としてこの世に生を受けました。お祭り囃子が響く中での、私の人生の幸せな始まりです。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 2 -->
+                            <div class="manga-slide slide-story" data-scene="2">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_childhood_mouse.png" alt="その他大勢のネズミ役" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 2: その他大勢のネズミ役 (幼少期)</span>
+                                    <p class="manga-text"
+                                        data-text="幼少期は、人と違うことをするのがとにかく苦手でした。保育園の学芸会では目立つ役を避け、その他大勢の『ネズミ役』をひっそりと演じていました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 3 -->
+                            <div class="manga-slide slide-story" data-scene="3">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_volleyball_struggle.png" alt="少女バレーボールでの葛藤"
+                                        class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 3: 少女バレーボールでの葛藤 (小学校高学年)</span>
+                                    <p class="manga-text"
+                                        data-text="小学5年で地元のバレーチームに所属し、背番号2番を背負って6年ではキャプテンに。バレーブームの真っ只中、両親は必死に応援してくれましたが、実はそれが自分には苦痛でなりませんでした。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 4 -->
+                            <div class="manga-slide slide-story" data-scene="4">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_volleyball_junior.png" alt="青春のバレーボール部" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 4: 青春のバレーボール部 (中学時代)</span>
+                                    <p class="manga-text"
+                                        data-text="中学でもバレーボール部に所属し、小学校と同じ思い入れのある背番号2番を付けて副キャプテンに就任。仲間と汗を流し、笑顔で勝利を目指した毎日は、私の青春そのものでした。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 5 -->
+                            <div class="manga-slide slide-story" data-scene="5">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_capping_ceremony.png" alt="戴帽式でのワクワク" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 5: 看護師への決意と戴帽式 (高校・専門学校時代)</span>
+                                    <p class="manga-text"
+                                        data-text="高校生の頃、看護師になることを決意。厳かな戴帽式でナースキャップを授かったとき、胸が熱くなり、これからの看護師人生への期待でワクワクしていました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 6 -->
+                            <div class="manga-slide slide-story" data-scene="6">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_nurse_peers.png" alt="石の上にも３年" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 6: 同期と支え合った下積み時代 (看護師初期)</span>
+                                    <p class="manga-text"
+                                        data-text="『石の上にも3年』。本当につらかった初期の時代も、同じ志を持つ大切な同期の仲間と支え合い、知識や技術を夢中で高め合っていました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 7 -->
+                            <div class="manga-slide slide-story" data-scene="7">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_uk_study_abroad.png" alt="針刺し事故とイギリス留学" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 7: 突然の糸切れとイギリス短期留学 (25歳・転機)</span>
+                                    <p class="manga-text"
+                                        data-text="25歳の時、残業続きの過酷な日々の中、針刺し事故をきっかけに突然、心の糸がプツンと切れ退職。その後、自分を見つめ直すためイギリスへ短期留学し、ホームステイを体験しました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 8 -->
+                            <div class="manga-slide slide-story" data-scene="8">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_clinic_care_manager.png" alt="個人の小さな病院勤務とケアマネジャー取得"
+                                        class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 8: 資格取得への扉と急性期病院への再就職 (飛躍)</span>
+                                    <p class="manga-text"
+                                        data-text="帰国後、自宅から近いアットホームな個人病院にパート勤務し、働きながらケアマネジャー資格を取得。これが眠っていた私の意欲を呼び覚まし、急性期病院への再就職へと繋がりました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 9 -->
+                            <div class="manga-slide slide-story" data-scene="9">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_nurse_success.png" alt="認定看護師への挑戦" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 9: 認定看護師への挑戦 (30歳)</span>
+                                    <p class="manga-text"
+                                        data-text="30歳。仕事をしながら倍率5倍の難関を突破し、東京での研修を経て皮膚排泄ケア認定看護師を取得。『震えるほど嬉しかった』私の挑戦 of 原点です。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 10 -->
+                            <div class="manga-slide slide-story" data-scene="10">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_husband_meet.png" alt="夫との出会い" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 10: 運命のパートナーとの出会い (30歳)</span>
+                                    <p class="manga-text"
+                                        data-text="資格を取得したまさにその年、のちに夫となる医師と出会いました。新しい人生の扉が、心強いパートナーの存在と共に少しずつ開き始めました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 11 -->
+                            <div class="manga-slide slide-story" data-scene="11">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_marriage_baby.png" alt="結婚と長女の誕生" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 11: 結婚, そして長女の誕生 (32-33歳)</span>
+                                    <p class="manga-text"
+                                        data-text="32歳で結婚。翌年には待望の長女が誕生しました。家族が増える喜びと、腕の中に抱く我が子の愛おしさに胸がいっぱいになり、幸せに満ち溢れていました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 12 -->
+                            <div class="manga-slide slide-story" data-scene="12">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_mother_struggle.png" alt="子育てと仕事の両立" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 12: 子育てと仕事の両立 (結婚後)</span>
+                                    <p class="manga-text"
+                                        data-text="結婚後、育児と仕事の両立は想像以上に大変でした。専門家としての責任と、母としての役割の狭間で、慌ただしく時間だけが過ぎていきました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 13 -->
+                            <div class="manga-slide slide-story" data-scene="13">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_hospital.png" alt="夜の診察室での涙" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 13: 夜の診察室での涙 (葛藤の日々)</span>
+                                    <p class="manga-text"
+                                        data-text="夜の誰もいない診察室に一人居残り、「思うような仕事ができない」と悔し涙を流す夜もありました。プロとしての焦りと孤独が心に深く影を落としていました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 14 -->
+                            <div class="manga-slide slide-story" data-scene="14">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_weekend_play.png" alt="週末の宝物時間" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 14: 宝物の週末 (土日の幸せ)</span>
+                                    <p class="manga-text"
+                                        data-text="そんな多忙な日々の中、土日に娘と思いっきり一緒に遊ぶ時間が、何よりの楽しみでなりませんでした。娘の笑顔は、私の心と疲れを癒す最高の魔法でした。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 15 -->
+                            <div class="manga-slide slide-story" data-scene="15">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_onsen_trip.png" alt="温泉旅行の想い出" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 15: 家族のきずな (もっぱら温泉旅行)</span>
+                                    <p class="manga-text"
+                                        data-text="医師として多忙な夫。そのため家族旅行はもっぱら温泉でした。温かな湯船に浸かりながら、小さな娘も温泉が大好きになっていきました。"></p>
+                                </div>
+                            </div>
+                            <!-- シーン 16 -->
+                            <div class="manga-slide slide-story" data-scene="16">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_infertility_pain.png" alt="不妊治療の試練" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 16: 二人目不妊という試練 (38歳)</span>
+                                    <p class="manga-text"
+                                        data-text="38歳。2年間にわたる不妊治療。看護師としての知識があるからこそ、その深い絶望や焦り、誰にも言えない苦しみに深く直面することとなりました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 17 -->
+                            <div class="manga-slide slide-story" data-scene="17">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_father_passing.png" alt="医療の限界と父の死" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 17: 医療の限界と父の見送り</span>
+                                    <p class="manga-text"
+                                        data-text="父が治療困難な癌を患い、「医療は全てを救えない」という悔しさに直面。妹と力を合わせ在宅で父を看取り、家族が揃う温かな空気の中で父の最期を見送りました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 18 -->
+                            <div class="manga-slide slide-story" data-scene="18">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_exam_struggle.png" alt="仕事と中学受験の葛藤" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 18: 自分への葛藤 (中学受験期)</span>
+                                    <p class="manga-text"
+                                        data-text="娘の中学受験期、仕事と家庭の両立で余裕がなく心身共に疲弊。「もっと娘に寄り添いたいのに、思うようにできない」と自分自身に深く葛藤しました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 19 -->
+                            <div class="manga-slide slide-story" data-scene="19">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_herbs_sweets.png" alt="ハーブ・ロースイーツとの出会い" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 19: ハーブとロースイーツの癒やし</span>
+                                    <p class="manga-text"
+                                        data-text="救いを求めるように学んだ多くの資格。特に30種類以上のハーブを自ら調合し、卵・乳製品・砂糖不使用の宝石のような『ロースイーツ』と合わせる時間が、私を優しく癒やしました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 20 -->
+                            <div class="manga-slide slide-story" data-scene="20">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_turning_point.png" alt="一本の線に繋がる" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 20: 運命の出会いと一本の線 (48歳)</span>
+                                    <p class="manga-text"
+                                        data-text="48歳、ゆうみさんとの出会い。その瞬間、ハーブの調合も8つの資格も、『ジンジャーエールしかない世界を変えたい』という切実な想いも、すべてが1つの使命に繋がりました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 21 -->
+                            <div class="manga-slide slide-story" data-scene="21">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_hospital_struggle.png" alt="病院統合の試練" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 21: 組織の変革と進化 (タイタニック体験)</span>
+                                    <p class="manga-text"
+                                        data-text="病院統合に伴う人間模様に奥の部屋で泣き崩れるほど辛い経験もしました。しかしその痛みが、私を2倍3倍と強く進化させる最大の転換点となりました。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 22 -->
+                            <div class="manga-slide slide-story" data-scene="22">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_care_manager.png" alt="800床の急性期病院を退職" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 22: 30年の看護師人生に終止符を打つ (新たなる旅立ち)</span>
+                                    <p class="manga-text"
+                                        data-text="800床の急性期病院を退職。30年に及ぶ看護師人生に、温かに終止符を打ちます。これまでのすべての経験と想いを胸に、これからはハーブティーティーセラピーという新たな形で、皆様の心に寄り添い、癒やしを届けてまいります。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- シーン 23 -->
+                            <div class="manga-slide slide-story" data-scene="23">
+                                <div class="manga-image-container">
+                                    <img src="assets/manga_welcoming_garden.png" alt="新たな陽だまりの聖域へ" class="manga-img">
+                                </div>
+                                <div class="manga-narrative-box">
+                                    <span class="manga-scene-badge">Scene 23: 2027年、新たな陽だまりの聖域へ</span>
+                                    <p class="manga-text"
+                                        data-text="つまずいた日も、立ち止まった日も。これまでのすべての私があったから、今日の私が生まれてくれた。愛おしい足跡をそっと抱きしめて、陽だまりのお庭であなたをお待ちしています。">
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="manga-sparkles-container" id="manga-sparkles"></div>
+                        </div>
+
+                        <!-- プレイヤーコントロールパネル -->
+                        <div class="manga-controls">
+                            <div class="manga-main-btns">
+                                <button id="manga-prev-btn" class="manga-btn ctrl-prev" title="前へ">❮</button>
+                                <button id="manga-play-btn" class="manga-btn ctrl-play" title="再生/一時停止">
+                                    <span class="play-icon">▶ Play Movie</span>
+                                </button>
+                                <button id="manga-next-btn" class="manga-btn ctrl-next" title="次へ">❯</button>
+                            </div>
+
+                            <!-- プログレスバー & タイムコード -->
+                            <div class="manga-progress-container">
+                                <div class="manga-timecode" id="manga-timecode">0:00 / 1:52</div>
+                                <div class="manga-progress-bar">
+                                    <div class="manga-progress-fill" id="manga-progress-fill"></div>
+                                </div>
+                                <div class="manga-badge">シアター</div>
+                            </div>
+
+                            <!-- 音声EQアニメーション（ダミー波形） & ミュートボタン -->
+                            <div class="manga-audio-panel">
+                                <button id="manga-mute-btn" class="manga-mute-btn" title="ミュート切替">
+                                    <span class="speaker-icon">🔊 BGM ON</span>
+                                </button>
+                                <div class="manga-eq-waves" id="manga-eq-waves">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- シーンセクター（ドットナビ）: JSで動的生成します -->
+                        <div class="manga-dots" id="manga-dots"></div>
                     </div>
                 </div>
             </section>
@@ -140,7 +513,8 @@
                             </p>
                             <div class="story-link-area">
                                 <p class="story-link-desc">日々の活動やときめきの日常はInstagramで発信しています。</p>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="instagram-story-btn">View Instagram</a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                    class="instagram-story-btn">View Instagram</a>
                             </div>
                         </div>
                     </div>
@@ -315,21 +689,26 @@
                         <!-- フォーム本体 (送信時の安全性を考慮した設計) -->
                         <form id="rsvp-form" class="rsvp-form">
                             <div class="form-group" style="margin-bottom: 24px;">
-                                <label for="guest-name" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">お名前</label>
+                                <label for="guest-name"
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">お名前</label>
                                 <input type="text" id="guest-name" name="name" required placeholder="例：chisako"
                                     class="form-input">
                             </div>
 
                             <div class="form-group" style="margin-bottom: 24px;">
-                                <label for="guest-email" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">メールアドレス</label>
-                                <input type="email" id="guest-email" name="email" required placeholder="example@email.com"
-                                    class="form-input">
+                                <label for="guest-email"
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">メールアドレス</label>
+                                <input type="email" id="guest-email" name="email" required
+                                    placeholder="example@email.com" class="form-input">
                             </div>
 
                             <div class="form-group" style="margin-bottom: 30px;">
-                                <label for="guest-message" style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">CHISAKOへのメッセージ / アレルギーなど</label>
+                                <label for="guest-message"
+                                    style="display: block; font-size: 0.85rem; font-weight: 600; color: var(--color-text-light); margin-bottom: 8px; letter-spacing: 1px; text-transform: uppercase;">CHISAKOへのメッセージ
+                                    / アレルギーなど</label>
                                 <textarea id="guest-message" name="message" rows="4"
-                                    placeholder="楽しみにしていることや、アレルギー・特別なご要望があればご記入ください..." class="form-input" style="resize: vertical; min-height: 120px;"></textarea>
+                                    placeholder="楽しみにしていることや、アレルギー・特別なご要望があればご記入ください..." class="form-input"
+                                    style="resize: vertical; min-height: 120px;"></textarea>
                             </div>
 
                             <button type="submit" class="submit-btn" style="width: 100%;">
@@ -339,13 +718,21 @@
 
                         <!-- 送信完了画面 (初期状態は非表示、JSで制御、セキュリティXSS対策済み) -->
                         <div id="rsvp-success" class="rsvp-success hidden" style="text-align: center;">
-                            <div class="success-icon" style="font-size: 3rem; margin-bottom: 20px; animation: float 3s infinite ease-in-out;">✨</div>
-                            <h4 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-text); margin-bottom: 16px;">ご予約ありがとうございます！</h4>
-                            <p class="success-message" style="font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 24px; line-height: 1.8;">
-                                <strong id="display-name" style="color: var(--color-primary-dark); font-size: 1.2rem; font-weight: 600;"></strong> 様のご褒美の時間が確定しました。<br>
+                            <div class="success-icon"
+                                style="font-size: 3rem; margin-bottom: 20px; animation: float 3s infinite ease-in-out;">
+                                ✨</div>
+                            <h4
+                                style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-text); margin-bottom: 16px;">
+                                ご予約ありがとうございます！</h4>
+                            <p class="success-message"
+                                style="font-size: 0.95rem; color: var(--color-text-light); margin-bottom: 24px; line-height: 1.8;">
+                                <strong id="display-name"
+                                    style="color: var(--color-primary-dark); font-size: 1.2rem; font-weight: 600;"></strong>
+                                様のご褒美の時間が確定しました。<br>
                                 6月22日、白いお召し物でお会いできるのを心より楽しみにしております。
                             </p>
-                            <p class="success-sub" style="font-size: 0.8rem; color: var(--color-text-light); opacity: 0.8; margin-bottom: 30px;">
+                            <p class="success-sub"
+                                style="font-size: 0.8rem; color: var(--color-text-light); opacity: 0.8; margin-bottom: 30px;">
                                 ※入力いただいた情報は、ブラウザに安全に保存されました。（LocalStorage）
                             </p>
                             <button id="reset-form-btn" class="reset-btn">戻る</button>

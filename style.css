@@ -5,22 +5,31 @@
 
 /* --- 1. 変数定義 (デザインシステム) --- */
 :root {
-    --color-bg: #faf9f6;          /* 温かみのあるリネンの白 */
-    --color-text: #4a4d4a;        /* 優しいチャコールグレー */
-    --color-text-light: #7a7e7a;  /* 明るいグレー */
-    --color-primary: #8fa89b;     /* セージグリーン（くすみ緑） */
-    --color-primary-light: #e6ede9; /* 淡いくすみ緑 */
-    --color-primary-dark: #6e8679;  /* 深いセージグリーン */
-    --color-accent-blue: #5d8ca8; /* 大好きな青（バタフライピー） */
-    --color-accent-red: #c25967;  /* 大好きな赤（ベリー・ローズ） */
-    
+    --color-bg: #faf9f6;
+    /* 温かみのあるリネンの白 */
+    --color-text: #4a4d4a;
+    /* 優しいチャコールグレー */
+    --color-text-light: #7a7e7a;
+    /* 明るいグレー */
+    --color-primary: #8fa89b;
+    /* セージグリーン（くすみ緑） */
+    --color-primary-light: #e6ede9;
+    /* 淡いくすみ緑 */
+    --color-primary-dark: #6e8679;
+    /* 深いセージグリーン */
+    --color-accent-blue: #5d8ca8;
+    /* 大好きな青（バタフライピー） */
+    --color-accent-red: #c25967;
+    /* 大好きな赤（ベリー・ローズ） */
+
     --font-serif: 'Cormorant Garamond', 'Noto Serif JP', serif;
     --font-sans: 'Montserrat', sans-serif;
-    
+
     --transition-smooth: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     --shadow-soft: 0 10px 30px rgba(143, 168, 155, 0.08);
     --shadow-medium: 0 20px 40px rgba(143, 168, 155, 0.12);
-    --color-linen: #f4f1ea;        /* 温かみのある亜麻色 */
+    --color-linen: #f4f1ea;
+    /* 温かみのある亜麻色 */
 }
 
 /* --- 2. 基本設定 --- */
@@ -43,7 +52,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-serif);
     font-weight: 300;
     letter-spacing: 0.05em;
@@ -200,12 +212,27 @@ img {
     padding: 20px 5%;
 }
 
-.nav-logo {
+.nav-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.1;
+}
+
+.nav-logo-main {
     font-family: var(--font-serif);
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--color-primary-dark);
     letter-spacing: 0.05em;
+}
+
+.nav-logo-sub {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    letter-spacing: 0.04em;
+    margin-top: 1px;
 }
 
 .nav-links {
@@ -315,14 +342,19 @@ img {
     width: 120%;
     height: 140%;
     background: radial-gradient(ellipse at top left, rgba(143, 168, 155, 0.07) 0%, transparent 60%),
-                radial-gradient(ellipse at bottom right, rgba(230, 237, 233, 0.15) 0%, transparent 50%);
+        radial-gradient(ellipse at bottom right, rgba(230, 237, 233, 0.15) 0%, transparent 50%);
     z-index: 2;
     animation: slowGlow 15s ease-in-out infinite alternate;
 }
 
 @keyframes slowGlow {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(2%, 3%) scale(1.05); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(2%, 3%) scale(1.05);
+    }
 }
 
 .hero-content {
@@ -333,7 +365,8 @@ img {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: -160px; /* 全体をさらに上に引き上げます */
+    margin-top: -160px;
+    /* 全体をさらに上に引き上げます */
 }
 
 .hero-subtitle {
@@ -341,7 +374,8 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.25em;
     color: var(--color-text);
-    margin-bottom: 40px; /* タイトルとの間隔を広げ、Presented by CHISAKO をより上に配置します */
+    margin-bottom: 40px;
+    /* タイトルとの間隔を広げ、Presented by CHISAKO をより上に配置します */
     font-family: var(--font-sans);
     font-weight: 600;
 }
@@ -430,8 +464,14 @@ img {
 }
 
 @keyframes scrollDown {
-    0% { transform: translateY(-100%); }
-    80%, 100% { transform: translateY(300%); }
+    0% {
+        transform: translateY(-100%);
+    }
+
+    80%,
+    100% {
+        transform: translateY(300%);
+    }
 }
 
 /* --- 5. Teanoir紹介セクション (About) --- */
@@ -489,7 +529,8 @@ img {
     width: 300px;
     height: 400px;
     border: 1px solid rgba(143, 168, 155, 0.2);
-    border-radius: 150px 150px 0 0; /* アーチ形 */
+    border-radius: 150px 150px 0 0;
+    /* アーチ形 */
     padding: 15px;
     display: flex;
     align-items: center;
@@ -696,8 +737,8 @@ img {
     border-radius: 70px 70px 0 0;
     z-index: 10;
     box-shadow: inset 0 10px 20px rgba(255, 255, 255, 0.6),
-                inset -5px -5px 15px rgba(143, 168, 155, 0.05),
-                0 10px 25px rgba(143, 168, 155, 0.05);
+        inset -5px -5px 15px rgba(143, 168, 155, 0.05),
+        0 10px 25px rgba(143, 168, 155, 0.05);
     backdrop-filter: blur(1.5px);
     -webkit-backdrop-filter: blur(1.5px);
     transform-origin: bottom center;
@@ -786,9 +827,20 @@ img {
     margin-bottom: 15px;
 }
 
-.badge-blue { background-color: rgba(93, 140, 168, 0.1); color: var(--color-accent-blue); }
-.badge-red  { background-color: rgba(194, 89, 103, 0.1); color: var(--color-accent-red); }
-.badge-sage { background-color: rgba(143, 168, 155, 0.15); color: var(--color-primary-dark); }
+.badge-blue {
+    background-color: rgba(93, 140, 168, 0.1);
+    color: var(--color-accent-blue);
+}
+
+.badge-red {
+    background-color: rgba(194, 89, 103, 0.1);
+    color: var(--color-accent-red);
+}
+
+.badge-sage {
+    background-color: rgba(143, 168, 155, 0.15);
+    color: var(--color-primary-dark);
+}
 
 .case-item-title {
     font-size: 1.15rem;
@@ -827,8 +879,13 @@ img {
 }
 
 @keyframes subtleFloat {
-    0% { transform: scale(1.15) translateY(0); }
-    100% { transform: scale(1.15) translateY(-6px); }
+    0% {
+        transform: scale(1.15) translateY(0);
+    }
+
+    100% {
+        transform: scale(1.15) translateY(-6px);
+    }
 }
 
 /* --- 8. ビジュアルギャラリー (Gallery) --- */
@@ -869,10 +926,21 @@ img {
 }
 
 /* プレースホルダーの背景（ナチュラルなくすみグリーン・ホワイト系のグラデーション） */
-.g-bg-1 { background: linear-gradient(135deg, #e6ede9 0%, #f4f1ea 100%); }
-.g-bg-2 { background: linear-gradient(135deg, #f0ede6 0%, #dfe7e2 100%); }
-.g-bg-3 { background: linear-gradient(135deg, #ebdcdb 0%, #e6ede9 100%); }
-.g-bg-4 { background: linear-gradient(135deg, #faf9f6 0%, #e1e9e4 100%); }
+.g-bg-1 {
+    background: linear-gradient(135deg, #e6ede9 0%, #f4f1ea 100%);
+}
+
+.g-bg-2 {
+    background: linear-gradient(135deg, #f0ede6 0%, #dfe7e2 100%);
+}
+
+.g-bg-3 {
+    background: linear-gradient(135deg, #ebdcdb 0%, #e6ede9 100%);
+}
+
+.g-bg-4 {
+    background: linear-gradient(135deg, #faf9f6 0%, #e1e9e4 100%);
+}
 
 /* プレースホルダー内部の擬似要素（光と影のレイヤー） */
 .gallery-img-placeholder::before {
@@ -1072,16 +1140,22 @@ img {
     .hero-title {
         font-size: 3.8rem;
     }
-    .about-grid, .profile-grid {
+
+    .about-grid,
+    .profile-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .about-visual, .profile-image-area {
+
+    .about-visual,
+    .profile-image-area {
         order: -1;
     }
+
     .glass-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .details-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -1092,37 +1166,542 @@ img {
     .section {
         padding: 70px 0;
     }
+
     .hero-title {
         font-size: 3.2rem;
     }
+
     .profile-subtitle {
         font-size: 1.15rem;
     }
+
     .hero-tagline {
         font-size: 1.4rem;
     }
+
     .nav-links {
-        display: none; /* 簡単のため、モバイル時は非表示、必要ならJSで拡張 */
+        display: none;
+        /* 簡単のため、モバイル時は非表示、必要ならJSで拡張 */
     }
+
     .menu-toggle {
         display: flex;
     }
+
     .glass-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
     .details-grid {
         grid-template-columns: 1fr;
     }
+
     .gallery-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: 200px;
     }
-    .gallery-item.item-large, .gallery-item.item-wide {
+
+    .gallery-item.item-large,
+    .gallery-item.item-wide {
         grid-column: span 1;
         grid-row: span 1;
     }
+
     .contact-card {
         padding: 35px 20px;
+    }
+}
+
+/* ==========================================================================
+   Manga Story Theater Player Styles
+   ========================================================================== */
+.manga-theater-section {
+    background-color: #faf9f6;
+    border-bottom: 1px solid rgba(143, 168, 155, 0.1);
+    padding: 80px 0;
+}
+
+/* モード切り替えヘッダー */
+.manga-player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(143, 168, 155, 0.15);
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.manga-player-title {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--color-primary-dark);
+    font-weight: 500;
+}
+
+.manga-mode-toggle {
+    display: flex;
+    background-color: var(--color-primary-light);
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid rgba(143, 168, 155, 0.15);
+}
+
+.manga-mode-toggle .mode-btn {
+    border: none;
+    background: none;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.manga-mode-toggle .mode-btn.active {
+    background-color: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(143, 168, 155, 0.25);
+}
+
+.manga-mode-toggle .mode-btn:hover:not(.active) {
+    background-color: rgba(143, 168, 155, 0.15);
+}
+
+@media screen and (max-width: 768px) {
+    .manga-player-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.manga-player-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(143, 168, 155, 0.2);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+}
+
+/* 映像スクリーンエリア */
+.manga-screen {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #1a1a1a;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.manga-frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #fff;
+    /* 白枠 */
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 15;
+    pointer-events: none;
+}
+
+/* スライドスタイル */
+.manga-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.manga-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/* イラストのKen Burns効果 */
+.manga-image-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+}
+
+.manga-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 24s linear;
+}
+
+/* アクティブスライドかつ再生中のみKen Burnsアニメーション */
+.manga-screen.playing .manga-slide.active .manga-img {
+    animation: kenBurnsZoom 24s linear forwards;
+}
+
+@keyframes kenBurnsZoom {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.08) translate(-1%, -0.5%);
+    }
+
+    100% {
+        transform: scale(1.15) translate(-2%, -1%);
+    }
+}
+
+/* ナレーション吹き出し調ボックス */
+.manga-narrative-box {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--color-primary-dark);
+    border-radius: 12px;
+    padding: 16px 20px;
+    z-index: 20;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+    min-height: 98px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.manga-scene-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: var(--color-primary-dark);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.manga-text {
+    font-size: 0.88rem;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* タイピング風カーソルエフェクト */
+.manga-text::after {
+    content: ' ✍️';
+    display: inline-block;
+    animation: typingPen 0.8s infinite alternate;
+}
+
+.manga-text.typing-complete::after {
+    display: none;
+}
+
+@keyframes typingPen {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-3px) scale(1.1);
+    }
+}
+
+/* コントローラー */
+.manga-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px 10px 0;
+    border-top: 1px solid rgba(143, 168, 155, 0.15);
+    gap: 15px;
+}
+
+.manga-main-btns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.manga-btn {
+    background-color: var(--color-primary-light);
+    border: 1px solid rgba(143, 168, 155, 0.2);
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+}
+
+.ctrl-prev,
+.ctrl-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ctrl-play {
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 10px rgba(143, 168, 155, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.manga-btn:hover {
+    background-color: var(--color-primary-dark);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.ctrl-play:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* プログレスバー */
+.manga-progress-container {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.manga-timecode {
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    color: var(--color-text-light);
+    min-width: 75px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.manga-progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: rgba(143, 168, 155, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.manga-progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    transition: width 0.1s linear;
+}
+
+.manga-badge {
+    font-size: 0.7rem;
+    background-color: rgba(143, 168, 155, 0.1);
+    color: var(--color-primary-dark);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* 音声 EQ パネル */
+.manga-audio-panel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.manga-mute-btn {
+    background: none;
+    border: 1px solid rgba(143, 168, 155, 0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.manga-mute-btn:hover {
+    background-color: rgba(143, 168, 155, 0.08);
+    color: var(--color-primary-dark);
+}
+
+.manga-eq-waves {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 16px;
+    width: 25px;
+}
+
+.manga-eq-waves span {
+    display: block;
+    width: 3px;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: height 0.2s ease;
+}
+
+/* アクティブ時の波形アニメーション */
+.manga-eq-waves.active span {
+    animation: eqWave 1.2s infinite ease-in-out alternate;
+}
+
+.manga-eq-waves.active span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.manga-eq-waves.active span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.manga-eq-waves.active span:nth-child(3) {
+    animation-delay: 0.0s;
+}
+
+.manga-eq-waves.active span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.manga-eq-waves.active span:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+@keyframes eqWave {
+    0% {
+        height: 2px;
+    }
+
+    100% {
+        height: 16px;
+    }
+}
+
+/* スライド表示用ドット */
+.manga-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.manga-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(143, 168, 155, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.manga-dot.active {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.2);
+}
+
+/* モバイルレスポンシブ */
+@media screen and (max-width: 768px) {
+    .manga-theater-section {
+        padding: 50px 0;
+    }
+
+    .manga-player-card {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .manga-screen {
+        aspect-ratio: 4 / 3;
+        /* スマホではテキスト領域を確保するため少し縦長に */
+    }
+
+    .manga-frame-overlay {
+        border-width: 4px;
+    }
+
+    .manga-narrative-box {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        padding: 12px 14px;
+        min-height: 108px;
+    }
+
+    .manga-scene-badge {
+        left: 12px;
+        font-size: 0.62rem;
+    }
+
+    .manga-text {
+        font-size: 0.78rem;
+        line-height: 1.5;
+    }
+
+    .manga-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .manga-progress-container {
+        width: 100%;
+        order: -1;
+        /* モバイルでは進行バーを上に配置 */
+    }
+
+    .manga-audio-panel {
+        justify-content: space-between;
     }
 }
